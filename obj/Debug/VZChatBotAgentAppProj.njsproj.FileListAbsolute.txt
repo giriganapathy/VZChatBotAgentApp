@@ -1,0 +1,2 @@
+C:\girig\aims\MyAssignments\bot\repository\VZChatBotAgentApp\VZChatBotAgentAppProj\obj\Debug\VZChatBotAgentAppProj.njsprojResolveAssemblyReference.cache
+C:\girig\aims\MyAssignments\bot\repository\VZChatBotAgentApp\VZChatBotAgentAppProj\bin\Microsoft.NodejsTools.WebRole.dll
