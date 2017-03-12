@@ -7,8 +7,8 @@ var modelUri = "https://api.projectoxford.ai/luis/v1/application?id=588f2ecf-688
 var recognizer = new builder.LuisRecognizer(model);
 var dialog = new builder.IntentDialog({ recognizers: [recognizer] });
 var currentOffer = "FiOS Triple Play";
-var connector = new builder.ConsoleConnector().listen();
-/*var connector = new builder.ChatConnector(
+
+var connector = new builder.ChatConnector(
 {    "appId": process.env.MICROSOFT_APP_ID,    
     "appPassword": process.env.MICROSOFT_APP_PASSWORD}
 );
@@ -17,7 +17,9 @@ var server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, function () {    
   console.log("%s listening to %s", server.name, server.url);
 });
-server.post("/api/messages", connector.listen());*/
+server.post("/api/messages", connector.listen());
+
+//var connector = new builder.ConsoleConnector().listen();
 var bot = new builder.UniversalBot(connector);
 /*
 bot.dialog("/", function (session) {
