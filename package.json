@@ -4,7 +4,12 @@
   "description": "VZChatBotAgentAppProj",
   "main": "app.js",
   "author": {
-    "name": "v631754",
+    "name": "giriganapathy",
     "email": ""
+  },
+  "dependencies": {
+    "botbuilder": "^3.7.0",
+    "node-rest-client": "^3.0.3",
+    "restify": "^4.3.0"
   }
 }
