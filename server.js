@@ -1,8 +1,8 @@
 var builder = require("botbuilder");
 var restify = require("restify");
 // Create LUIS recognizer that points at our model and add it as the root '/' dialog for our Cortana Bot.
-var model = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/588f2ecf-6889-42a9-9e42-6e345e692543?subscription-key=12345678912345678912345678912345&verbose=true&q=";
-var modelUri = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/588f2ecf-6889-42a9-9e42-6e345e692543?subscription-key=12345678912345678912345678912345";
+var model = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/588f2ecf-6889-42a9-9e42-6e345e692543?subscription-key=b27a7109bc1046fb9cc7cfa874e3f819&verbose=true&q=";
+var modelUri = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/588f2ecf-6889-42a9-9e42-6e345e692543?subscription-key=b27a7109bc1046fb9cc7cfa874e3f819";
 
 var recognizer = new builder.LuisRecognizer(model);
 var dialog = new builder.IntentDialog({ recognizers: [recognizer] });
