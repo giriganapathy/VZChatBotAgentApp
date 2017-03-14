@@ -124,6 +124,7 @@ bot.dialog("/", [
         }
         var entity = builder.EntityRecognizer.findEntity(entities, 'builtin.number'); 
         if (null != entity) {
+          session.send("Entity:" + entity.toString());  
           var numberOfDevices = entity.entity; 
           if (null != numberOfDevices) { 
             session.userData.numberOfDevices = numberOfDevices; 
