@@ -117,7 +117,7 @@ bot.dialog("/", [
   },
   function (session, results, next) {
     if (results.response && !session.userData.numberOfDevices) {
-      builder.LuisDialog.recognizer.recognize(session.message.text, modelUri, function (err, intents, entities) {
+      builder.LuisRecognizer.recognize(session.message.text, modelUri, function (err, intents, entities) {
         if (null != err) {
           session.endDialog("Unexpected error while parsing your answer. Try again after sometime!");
           return;
@@ -209,7 +209,7 @@ bot.dialog("/", [
   },
   function (session, results, next) {
     if (results.response && !session.userData.selectedPlan) {
-      builder.LuisDialog.recognizer.recognize(session.message.text, modelUri, function (err, intents, entities) {
+      builder.LuisRecognizer.recognize(session.message.text, modelUri, function (err, intents, entities) {
         if (null != err) {
           session.endDialog("Unexpected error while parsing your answer. Try again after sometime!");
           return;
@@ -366,7 +366,7 @@ bot.dialog("/", [
   },
   function (session, results, next) {
     if (results.response) {
-      builder.LuisDialog.recognizer.recognize(session.message.text, modelUri, function (err, intents, entities) {
+      builder.LuisRecognizer.recognize(session.message.text, modelUri, function (err, intents, entities) {
         if (null != err) {
           session.endDialog("Unexpected error while parsing your answer. Try again after sometime!");
           return;
